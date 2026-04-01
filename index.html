@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manas Das — AI Products for Regulated Industries</title>
+<meta name="description" content="I build AI products for industries where the cost of getting it wrong is measured in lives and millions. 12 years across pharma, petrochemicals, life sciences, and manufacturing.">
+<style>
+:root {
+  --bg: #ffffff; --bg2: #f7f8fa; --bg3: #f0f2f5;
+  --tx: #1a1a1a; --tx2: #5a6577; --tx3: #8a94a6;
+  --bd: #e2e6ec; --bd2: #d0d5dd;
+  --teal: #0f6e56; --teal-l: #e8f5f1; --teal-d: #04342c;
+  --amber: #ba7517; --amber-l: #fff8ed; --amber-d: #412402;
+  --link: #0f6e56;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1c20; --bg2: #22252a; --bg3: #2a2d33;
+    --tx: #e8e8e8; --tx2: #9ca3af; --tx3: #6b7280;
+    --bd: #333840; --bd2: #3f4550;
+    --teal: #5dcaa5; --teal-l: #0f3a2e; --teal-d: #9fe1cb;
+    --amber: #fac775; --amber-l: #3a2a10; --amber-d: #fac775;
+    --link: #5dcaa5;
+  }
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--tx); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+/* Nav */
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 2px solid var(--teal); }
+.nav-name { font-size: 18px; font-weight: 600; color: var(--tx); }
+.nav-links { display: flex; gap: 20px; align-items: center; font-size: 14px; }
+.nav-links a { color: var(--tx3); }
+.nav-links a:hover { color: var(--tx); text-decoration: none; }
+.nav-email { color: var(--link) !important; }
+
+/* Hero */
+.hero { padding: 48px 0 40px; display: grid; grid-template-columns: 1fr 260px; gap: 20px; }
+.hero-text { background: var(--teal-l); border-radius: 16px; padding: 36px 32px; }
+.hero-loc { font-size: 14px; color: var(--teal); margin-bottom: 12px; }
+.hero-h { font-size: 26px; font-weight: 600; color: var(--teal-d); line-height: 1.35; margin-bottom: 16px; }
+.hero-p { font-size: 15px; color: var(--teal); line-height: 1.75; }
+.hero-stats { display: flex; flex-direction: column; gap: 12px; }
+.stat { background: var(--bg2); border-radius: 12px; padding: 20px; text-align: center; flex: 1; }
+.stat-n { font-size: 32px; font-weight: 600; color: var(--tx); }
+.stat-l { font-size: 12px; color: var(--tx3); margin-top: 4px; }
+.stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.stat-row .stat { padding: 16px; }
+.stat-row .stat-n { font-size: 26px; }
+
+/* Section */
+.section { padding: 40px 0; }
+.section-title { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); margin-bottom: 20px; }
+
+/* Work cards */
+.work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.work-card { border: 1px solid var(--bd); border-radius: 14px; padding: 24px; background: var(--bg); }
+.work-card h3 { font-size: 17px; font-weight: 600; color: var(--tx); margin-bottom: 10px; }
+.work-card p { font-size: 14px; color: var(--tx2); line-height: 1.7; margin-bottom: 14px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-size: 12px; padding: 3px 12px; border-radius: 8px; background: var(--bg2); color: var(--tx3); }
+.work-also { font-size: 14px; color: var(--tx3); margin-top: 16px; line-height: 1.7; }
+
+/* Writing grid */
+.write-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.write-tile { border-radius: 14px; padding: 24px; }
+.write-tile.pub { background: var(--teal-l); }
+.write-tile.rec { background: var(--amber-l); }
+.write-tile-title { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; }
+.pub .write-tile-title { color: var(--teal); }
+.rec .write-tile-title { color: var(--amber); }
+.write-item { margin-bottom: 12px; font-size: 14px; line-height: 1.7; }
+.write-item strong { font-weight: 600; }
+.pub .write-item strong { color: var(--teal-d); }
+.pub .write-item { color: var(--teal); }
+.rec .write-item strong { color: var(--amber-d); }
+.rec .write-item { color: var(--amber); }
+
+/* Background */
+.bg-tile { background: var(--bg2); border-radius: 14px; padding: 24px; }
+.bg-role { font-size: 15px; margin-bottom: 8px; line-height: 1.6; }
+.bg-role strong { font-weight: 600; color: var(--tx); }
+.bg-role span { color: var(--tx2); }
+.bg-edu { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--bd); font-size: 14px; color: var(--tx2); line-height: 1.7; }
+.bg-certs { margin-top: 8px; font-size: 13px; color: var(--tx3); line-height: 1.7; }
+
+/* Footer */
+.footer { padding: 24px 0; border-top: 2px solid var(--teal); display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--tx3); margin-top: 20px; }
+.footer-links { display: flex; gap: 16px; align-items: center; }
+.footer-links a { color: var(--link); }
+.footer-muted { color: var(--tx3); }
+
+/* Mobile */
+@media (max-width: 700px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-stats { flex-direction: row; gap: 12px; }
+  .stat { flex: 1; }
+  .stat-row { flex: 2; }
+  .work-grid { grid-template-columns: 1fr; }
+  .write-grid { grid-template-columns: 1fr; }
+  .nav-links .nav-hide { display: none; }
+  .hero-h { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav class="nav">
+  <div class="nav-name">Manas Das</div>
+  <div class="nav-links">
+    <a href="#work" class="nav-hide">Work</a>
+    <a href="#writing" class="nav-hide">Writing</a>
+    <a href="#background" class="nav-hide">Background</a>
+    <a href="mailto:manask2012@email.iimcal.ac.in" class="nav-email">manask2012@email.iimcal.ac.in</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-text">
+    <div class="hero-loc">Princeton, NJ</div>
+    <h1 class="hero-h">I build AI products for industries where the cost of getting it wrong is measured in lives and millions.</h1>
+    <p class="hero-p">12 years across pharmaceuticals, petrochemicals, life sciences, and manufacturing. Currently developing first-of-its-kind AI applications at Dr. Reddy's Laboratories for the North America business.</p>
+  </div>
+  <div class="hero-stats">
+    <div class="stat">
+      <div class="stat-n">15+</div>
+      <div class="stat-l">AI products shipped to production</div>
+    </div>
+    <div class="stat-row">
+      <div class="stat">
+        <div class="stat-n">50+</div>
+        <div class="stat-l">agents designed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">25+</div>
+        <div class="stat-l">team led</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="work">
+  <div class="section-title">Selected work</div>
+  <div class="work-grid">
+
+    <div class="work-card">
+      <h3>Drug lifecycle intelligence</h3>
+      <p>First-of-its-kind AI platform tracking pharmaceutical products from market entry through commercial optimization — competitive signals, financial KPIs, and strategic playbooks for product managers.</p>
+      <div class="tags">
+        <span class="tag">Product owner</span>
+        <span class="tag">25+ team</span>
+        <span class="tag">Multi-release agile</span>
+        <span class="tag">GCP</span>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <h3>Multi-agent conversational AI</h3>
+      <p>Business users query commercial data in natural language — 8-10 specialized sub-agents for intent parsing, guardrail validation, SQL generation, and NL response synthesis across multiple LLMs.</p>
+      <div class="tags">
+        <span class="tag">LLMs</span>
+        <span class="tag">LangGraph</span>
+        <span class="tag">Multi-agent</span>
+        <span class="tag">In production</span>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <h3>Agentic portfolio intelligence</h3>
+      <p>50+ AI agents processing 80+ data sources — replacing weeks of manual portfolio analysis across IP, regulatory, clinical, commercial, and supply chain dimensions.</p>
+      <div class="tags">
+        <span class="tag">Agentic AI</span>
+        <span class="tag">Event-driven</span>
+        <span class="tag">Governance design</span>
+        <span class="tag">In development</span>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <h3>Competitive intelligence suite</h3>
+      <p>ML model predicting competitor market entry behavior combined with LLM-based real-time regulatory monitoring — giving commercial teams an information advantage over the market.</p>
+      <div class="tags">
+        <span class="tag">ML</span>
+        <span class="tag">LLM</span>
+        <span class="tag">Gradient boosting</span>
+        <span class="tag">IQVIA / FDA data</span>
+      </div>
+    </div>
+
+  </div>
+  <p class="work-also">Also: commercial ML recommender (algorithm-to-Salesforce integration) · AI Center of Excellence at Reliance Industries (founding team, 15+ applications, 6 business units)</p>
+</div>
+
+<div class="section" id="writing">
+  <div class="section-title">Writing & recognition</div>
+  <div class="write-grid">
+
+    <div class="write-tile pub">
+      <div class="write-tile-title">Publications</div>
+      <div class="write-item"><strong>GenAI in drug discovery: issues and challenges</strong><br>Firstword Expertviews, 2024</div>
+      <div class="write-item"><strong>Building a winning AI product</strong><br>Intl. Institute of Analytics, 2023</div>
+      <div class="write-item"><strong>Incentivizing AI adoption</strong><br>Intl. Institute of Analytics, 2023</div>
+      <div class="write-item" style="margin-top:8px; opacity: 0.75;">+ 3 white papers (Reliance C-suite, IBM Global) and 8 articles on LinkedIn / Medium</div>
+    </div>
+
+    <div class="write-tile rec">
+      <div class="write-tile-title">Speaking & recognition</div>
+      <div class="write-item"><strong>Stevie Awards Judge</strong> — 50+ tech evaluations</div>
+      <div class="write-item"><strong>IIM Calcutta Angel Network</strong> — health-tech advisor</div>
+      <div class="write-item"><strong>Panel moderator</strong> — 100+ attendees, 2022</div>
+      <div class="write-item"><strong>ASPIRE team excellence</strong> — 3 consecutive years</div>
+      <div class="write-item" style="opacity: 0.75;">Super Star Award (Reliance) · Service Excellence (IBM) · AI training for 200+ colleagues · Annual Report feature</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section" id="background">
+  <div class="section-title">Background</div>
+  <div class="bg-tile">
+    <div class="bg-role"><strong>Dr. Reddy's Laboratories</strong> <span>· Director, AI Products & Analytics · Princeton, NJ · 2020 — present</span></div>
+    <div class="bg-role"><strong>EY (Ernst & Young)</strong> <span>· Manager, Business Advisory · Mumbai · 2019 — 2020</span></div>
+    <div class="bg-role"><strong>Reliance Industries Limited</strong> <span>· General Manager, Data Science · Mumbai · 2016 — 2019</span></div>
+    <div class="bg-role"><strong>IBM India</strong> <span>· Business Transformation Consultant · Mumbai · 2012 — 2016</span></div>
+    <div class="bg-edu">
+      <strong>MBA</strong>, IIM Calcutta · <strong>B.E. Electronics</strong>, Jadavpur University · Co-founder, 2hops.in (2014–17)
+    </div>
+    <div class="bg-certs">IBM AI Product Manager · AI for Growth (Kellogg) · PSPO II · CPIM · Design Thinking · ML Foundations · Disciplined Agile</div>
+  </div>
+</div>
+
+<footer class="footer">
+  <span>Princeton, NJ</span>
+  <div class="footer-links">
+    <a href="mailto:manask2012@email.iimcal.ac.in">manask2012@email.iimcal.ac.in</a>
+    <a href="https://www.linkedin.com/in/manas-das-3a65951b" target="_blank">LinkedIn</a>
+    <span class="footer-muted">Resume on request</span>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
