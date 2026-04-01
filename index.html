@@ -29,16 +29,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sa
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
 .wrap { max-width: 820px; margin: 0 auto; padding: 0 24px; }
-
-/* Nav */
 .nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 2px solid var(--teal); }
 .nav-name { font-size: 18px; font-weight: 600; color: var(--tx); }
 .nav-links { display: flex; gap: 20px; align-items: center; font-size: 14px; }
 .nav-links a { color: var(--tx3); }
 .nav-links a:hover { color: var(--tx); text-decoration: none; }
 .nav-email { color: var(--link) !important; }
-
-/* Hero */
 .hero { padding: 48px 0 40px; display: grid; grid-template-columns: 1fr 260px; gap: 20px; }
 .hero-text { background: var(--teal-l); border-radius: 16px; padding: 36px 32px; }
 .hero-loc { font-size: 14px; color: var(--teal); margin-bottom: 12px; }
@@ -51,21 +47,14 @@ a:hover { text-decoration: underline; }
 .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .stat-row .stat { padding: 16px; }
 .stat-row .stat-n { font-size: 26px; }
-
-/* Section */
 .section { padding: 40px 0; }
 .section-title { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--teal); margin-bottom: 20px; }
-
-/* Work cards */
 .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .work-card { border: 1px solid var(--bd); border-radius: 14px; padding: 24px; background: var(--bg); }
 .work-card h3 { font-size: 17px; font-weight: 600; color: var(--tx); margin-bottom: 10px; }
 .work-card p { font-size: 14px; color: var(--tx2); line-height: 1.7; margin-bottom: 14px; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tag { font-size: 12px; padding: 3px 12px; border-radius: 8px; background: var(--bg2); color: var(--tx3); }
-.work-also { font-size: 14px; color: var(--tx3); margin-top: 16px; line-height: 1.7; }
-
-/* Writing grid */
 .write-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .write-tile { border-radius: 14px; padding: 24px; }
 .write-tile.pub { background: var(--teal-l); }
@@ -77,24 +66,22 @@ a:hover { text-decoration: underline; }
 .write-item strong { font-weight: 600; }
 .pub .write-item strong { color: var(--teal-d); }
 .pub .write-item { color: var(--teal); }
+.pub .write-item a { color: var(--teal-d); text-decoration: underline; }
+.pub .write-item a:hover { opacity: 0.8; }
 .rec .write-item strong { color: var(--amber-d); }
 .rec .write-item { color: var(--amber); }
-
-/* Background */
 .bg-tile { background: var(--bg2); border-radius: 14px; padding: 24px; }
 .bg-role { font-size: 15px; margin-bottom: 8px; line-height: 1.6; }
 .bg-role strong { font-weight: 600; color: var(--tx); }
 .bg-role span { color: var(--tx2); }
 .bg-edu { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--bd); font-size: 14px; color: var(--tx2); line-height: 1.7; }
 .bg-certs { margin-top: 8px; font-size: 13px; color: var(--tx3); line-height: 1.7; }
-
-/* Footer */
+.bg-auth { margin-top: 12px; font-size: 14px; color: var(--tx); }
+.bg-auth strong { font-weight: 600; }
 .footer { padding: 24px 0; border-top: 2px solid var(--teal); display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--tx3); margin-top: 20px; }
 .footer-links { display: flex; gap: 16px; align-items: center; }
 .footer-links a { color: var(--link); }
 .footer-muted { color: var(--tx3); }
-
-/* Mobile */
 @media (max-width: 700px) {
   .hero { grid-template-columns: 1fr; }
   .hero-stats { flex-direction: row; gap: 12px; }
@@ -104,6 +91,7 @@ a:hover { text-decoration: underline; }
   .write-grid { grid-template-columns: 1fr; }
   .nav-links .nav-hide { display: none; }
   .hero-h { font-size: 22px; }
+  .footer { flex-direction: column; gap: 8px; text-align: center; }
 }
 </style>
 </head>
@@ -149,51 +137,68 @@ a:hover { text-decoration: underline; }
   <div class="work-grid">
 
     <div class="work-card">
-      <h3>Drug lifecycle intelligence</h3>
+      <h3>Product Lifecycle Intelligence</h3>
       <p>First-of-its-kind AI platform tracking pharmaceutical products from market entry through commercial optimization — competitive signals, financial KPIs, and strategic playbooks for product managers.</p>
       <div class="tags">
         <span class="tag">Product owner</span>
         <span class="tag">25+ team</span>
         <span class="tag">Multi-release agile</span>
-        <span class="tag">GCP</span>
       </div>
     </div>
 
     <div class="work-card">
-      <h3>Multi-agent conversational AI</h3>
-      <p>Business users query commercial data in natural language — 8-10 specialized sub-agents for intent parsing, guardrail validation, SQL generation, and NL response synthesis across multiple LLMs.</p>
+      <h3>Conversational AI bot</h3>
+      <p>Business users query commercial data in natural language — 8-10 specialized sub-agents for intent parsing, guardrail validation, SQL generation, and NL response synthesis.</p>
       <div class="tags">
         <span class="tag">LLMs</span>
         <span class="tag">LangGraph</span>
         <span class="tag">Multi-agent</span>
+        <span class="tag">BigQuery</span>
         <span class="tag">In production</span>
       </div>
     </div>
 
     <div class="work-card">
-      <h3>Agentic portfolio intelligence</h3>
-      <p>50+ AI agents processing 80+ data sources — replacing weeks of manual portfolio analysis across IP, regulatory, clinical, commercial, and supply chain dimensions.</p>
+      <h3>Agentic Portfolio Intelligence</h3>
+      <p>Agentic AI framework to monitor risk profile of pre-launch products — replacing weeks of manual portfolio analysis and delayed insights with curated recommendations on Proceed / Pivot / Kill.</p>
       <div class="tags">
         <span class="tag">Agentic AI</span>
         <span class="tag">Event-driven</span>
-        <span class="tag">Governance design</span>
         <span class="tag">In development</span>
       </div>
     </div>
 
     <div class="work-card">
       <h3>Competitive intelligence suite</h3>
-      <p>ML model predicting competitor market entry behavior combined with LLM-based real-time regulatory monitoring — giving commercial teams an information advantage over the market.</p>
+      <p>ML model predicting competitor market entry behavior combined with LLM-based real-time regulatory monitoring — giving commercial teams an information advantage.</p>
       <div class="tags">
-        <span class="tag">ML</span>
         <span class="tag">LLM</span>
-        <span class="tag">Gradient boosting</span>
-        <span class="tag">IQVIA / FDA data</span>
+        <span class="tag">FDA data</span>
+        <span class="tag">IQVIA</span>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <h3>AI Product Studio setup</h3>
+      <p>Part of the founding team of the AI Center of Excellence at a $100B+ conglomerate. Helped define the operating model, recruited cross-functional teams, and shipped 15+ AI applications across 6 business units in 3 years — petrochemicals, retail, life sciences, R&D, treasury, and manufacturing.</p>
+      <div class="tags">
+        <span class="tag">AI CoE design</span>
+        <span class="tag">Cross-BU delivery</span>
+        <span class="tag">Team building</span>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <h3>AI Strategy Definition</h3>
+      <p>Developed a multi-year AI strategy for a major pharmaceutical company's North America business — identified critical business questions across the drug lifecycle, prioritized use cases on complexity vs. benefit, and plotted a quarterly execution roadmap. Top-priority use cases moved from concept to production within the first year.</p>
+      <div class="tags">
+        <span class="tag">AI strategy</span>
+        <span class="tag">Roadmapping</span>
+        <span class="tag">Stakeholder alignment</span>
       </div>
     </div>
 
   </div>
-  <p class="work-also">Also: commercial ML recommender (algorithm-to-Salesforce integration) · AI Center of Excellence at Reliance Industries (founding team, 15+ applications, 6 business units)</p>
 </div>
 
 <div class="section" id="writing">
@@ -203,18 +208,18 @@ a:hover { text-decoration: underline; }
     <div class="write-tile pub">
       <div class="write-tile-title">Publications</div>
       <div class="write-item"><strong>GenAI in drug discovery: issues and challenges</strong><br>Firstword Expertviews, 2024</div>
-      <div class="write-item"><strong>Building a winning AI product</strong><br>Intl. Institute of Analytics, 2023</div>
-      <div class="write-item"><strong>Incentivizing AI adoption</strong><br>Intl. Institute of Analytics, 2023</div>
-      <div class="write-item" style="margin-top:8px; opacity: 0.75;">+ 3 white papers (Reliance C-suite, IBM Global) and 8 articles on LinkedIn / Medium</div>
+      <div class="write-item"><a href="https://iianalytics.com/community/blog/how-to-build-a-winning-ai-product" target="_blank"><strong>Building a winning AI product</strong></a><br>Intl. Institute of Analytics, 2023</div>
+      <div class="write-item"><a href="https://iianalytics.com/community/blog/incentivizing-ai" target="_blank"><strong>Incentivizing AI adoption</strong></a><br>Intl. Institute of Analytics, 2023</div>
+      <div class="write-item" style="margin-top:8px; opacity: 0.75;">+ 3 white papers (For Reliance C-suite, IBM Global)</div>
     </div>
 
     <div class="write-tile rec">
       <div class="write-tile-title">Speaking & recognition</div>
-      <div class="write-item"><strong>Stevie Awards Judge</strong> — 50+ tech evaluations</div>
       <div class="write-item"><strong>IIM Calcutta Angel Network</strong> — health-tech advisor</div>
+      <div class="write-item"><strong>Stevie Awards Judge</strong> — 2022 – 2026</div>
       <div class="write-item"><strong>Panel moderator</strong> — 100+ attendees, 2022</div>
       <div class="write-item"><strong>ASPIRE team excellence</strong> — 3 consecutive years</div>
-      <div class="write-item" style="opacity: 0.75;">Super Star Award (Reliance) · Service Excellence (IBM) · AI training for 200+ colleagues · Annual Report feature</div>
+      <div class="write-item" style="opacity: 0.75;">Service Excellence Award (IBM) · AI training for 200+ colleagues</div>
     </div>
 
   </div>
@@ -228,9 +233,10 @@ a:hover { text-decoration: underline; }
     <div class="bg-role"><strong>Reliance Industries Limited</strong> <span>· General Manager, Data Science · Mumbai · 2016 — 2019</span></div>
     <div class="bg-role"><strong>IBM India</strong> <span>· Business Transformation Consultant · Mumbai · 2012 — 2016</span></div>
     <div class="bg-edu">
-      <strong>MBA</strong>, IIM Calcutta · <strong>B.E. Electronics</strong>, Jadavpur University · Co-founder, 2hops.in (2014–17)
+      <strong>MBA</strong>, IIM Calcutta · <strong>B.E. Electronics</strong>, Jadavpur University
     </div>
-    <div class="bg-certs">IBM AI Product Manager · AI for Growth (Kellogg) · PSPO II · CPIM · Design Thinking · ML Foundations · Disciplined Agile</div>
+    <div class="bg-certs"><strong>Certifications:</strong> IBM AI Product Manager · AI for Growth (Kellogg) · PSPO II · CPIM · Design Thinking · ML Foundations · Disciplined Agile</div>
+    <div class="bg-auth">Work Authorization in US: <strong>EB1A EAD</strong> Recipient</div>
   </div>
 </div>
 
